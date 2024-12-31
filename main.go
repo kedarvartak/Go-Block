@@ -11,6 +11,11 @@ type Block struct{
 }
 
 type Book struct{
+	ID 	        string   `json:"id"`
+	Title		string  `json:"title"`
+	Author		string	`json:"author"`
+	PublishDate string	`json:"publish_date"`
+	ISBN 		string	`json:"isbn"`
 	
 }
 
@@ -21,6 +26,8 @@ type BookCheckout struct{
 type Blockchain struct{
 	blocks []*Block
 }
+
+var Blockchain *Blockchain
 
 func main() {
 	r = mux.NewRouter()
